@@ -1,4 +1,4 @@
-<p align="left"><img style="float:left; padding:0 30px 0 0;" src="Treats/wwwroot/img/cake.png"></p>  
+<p align="left"><img style="float:left; padding:2px;" src="TreatMogul/wwwroot/img/cake.png"></p>  
 
 # Pierre's Sweet & Savory Treats
 
@@ -33,7 +33,7 @@ _Detailsssss_
 * Open the Treats folder in your preferred text editor. We'll come back to this shortly.
 
 * Set up your SQL database:
-  - Create a new ```appsettings.json``` file in your TreatMogul.Solution/Treats folder
+  - Create a new ```appsettings.json``` file in your TreatMogul.Solution/TreatMogul folder
   - Copy the following code into that file, replacing YOUR_PASSWORD with your MySql password:
 ```
     {
@@ -42,16 +42,16 @@ _Detailsssss_
       }
     }
 ```
-* This repo includes database Migrations. To make use of those, simply run ```dotnet ef database update``` in your TreatMogul.Solution/Treats folder
+* This repo includes database Migrations. To make use of those, simply run ```dotnet ef database update``` in your TreatMogul.Solution/TreatMogul folder
 
 
 * Restore and build the project:
-  - Navigate to the TreatMogul.Solution/Treats folder in the command line or terminal  
+  - Navigate to the TreatMogul.Solution/TreatMogul folder in the command line or terminal  
     -- Run ```dotnet restore``` to restore the project dependencies  
     -- Run ```dotnet build``` to build and compile the project  
 
 * Use the Web App:
-  - Navigate to the TreatMogul.Solution/Treats folder in the terminal
+  - Navigate to the TreatMogul.Solution/TreatMogul folder in the terminal
   - Run ```dotnet run``` 
   - If you would like to be able to continue viewing the site while making changes to its content, instead run ```dotnet watch run```
   - Access http://localhost:5000/ in your browser to view & interact with the web app
