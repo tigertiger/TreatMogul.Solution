@@ -2,4 +2,18 @@
   Layout = "_Layout";
 }
 
+@using TreatMogul.Models
 @model TreatMogul.Models.Flavor
+
+<h1>Add a Flavor</h1>
+
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.Taste)<br />
+    @Html.TextBoxFor(model => model.Taste, new {@class = "form-control", placeholder= "What does it taste like?", required="required"})<br/>
+
+    @Html.Label("What cautions must one levy?")<br />
+    @Html.TextBoxFor(model => model.Cautions)<br/>
+  
+    <input type="submit" value="Save Flavor" />
+  }

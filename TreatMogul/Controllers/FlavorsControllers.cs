@@ -30,6 +30,25 @@ namespace TreatMogul.Controllers
       return View(sorted);
     }
 
+    public ActionResult Create()
+    {
+      ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "Crub");
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Flavor flavor, int TreatId)
+    {
+      _db.Flavors.Add(flavor);
+      _db.SaveChanges();
+      if(TreatId !=0)
+      {
+        _db.Recipes.Add(new Recipe() {TreatId = TreatId, FlavorId = flavor.FlavorId});
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
 
   }
 }

@@ -2,4 +2,21 @@
   Layout = "_Layout";
 }
 
+@using TreatMogul.Models
 @model TreatMogul.Models.Treat
+
+<h1>Add a Treat</h1>
+
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.Crub)<br />
+    @Html.TextBoxFor(model => model.Crub, new {@class = "form-control", placeholder= "What sort of yum?", required="required"})<br/>
+
+    @Html.Label("What quantity do they come in?")<br />
+    @Html.TextBoxFor(model => model.BatchSize)<br/><br />
+
+    @Html.Label("How much does a batch cost?")<br />
+    @Html.TextBoxFor(model => model.TreatPrice)<br/>
+  
+    <input type="submit" value="Add to Menu" />
+  }
