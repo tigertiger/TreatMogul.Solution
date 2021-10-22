@@ -50,5 +50,7 @@ else
     <hr>
     <h5>Admin Options</h5>
     <p>@Html.ActionLink("Add a Special Flavor for this Treat", "AddFlavor", new {id = Model.TreatId})</p>
+    <p>@Html.ActionLink("Edit this Treat", "Edit", new {id = Model.TreatId})</p>
+    <p>@Html.ActionLink("Remove from Menu", "Delete", new {id = Model.TreatId})</p>
   </div>
 }

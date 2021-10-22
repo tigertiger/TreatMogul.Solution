@@ -3,3 +3,25 @@
 }
 
 @model TreatMogul.Models.Treat
+
+<h3>Edit @Model.Crub</h3>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.TreatId)
+
+  @Html.LabelFor(model => model.Crub)
+  @Html.EditorFor(model => model.Crub, new {@class = "form-control", placeholder= "Type of Yum", required="required"})<br/>
+
+  @Html.Label("Batch Size")<br />
+  @Html.EditorFor(model => model.BatchSize)<br/>
+
+  @Html.Label("Price")<br />
+  @Html.EditorFor(model => model.TreatPrice)<br />
+
+  @Html.Label("Is it yummy?")
+  @Html.EditorFor(model => model.Yummy)<br />
+  <span>for no, leave checkbox blank</span><br /><br />
+
+  <input type="submit" value="Update"/>
+}
