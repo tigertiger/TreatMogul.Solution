@@ -1,0 +1,35 @@
+@{
+  Layout = "_Layout";
+}
+
+@using TreatMogul.Models
+@model TreatMogul.Models.Flavor
+
+<h1>Add Treats in this Flavor</h1>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.FlavorId)
+  @Html.Label("What treats would you like in this flavor?")
+  @Html.DropDownList("TreatId")<br/><br/>
+  <input type="submit" value="Create!"/>
+}
+<br /><br />
+@if (@Model.JoinEntities.Count == 0)
+{
+  <p>There are currently no treats with this special flavor</p>
+}
+else
+{
+  <p>These Treats Already Comes in This Flavor:</p>
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.FlavorId)
+    <ul>
+    @foreach (var join in Model.JoinEntities)
+    {
+      <li>@join.Treat.Crub</li>
+    }
+    </ul>
+  }
+}

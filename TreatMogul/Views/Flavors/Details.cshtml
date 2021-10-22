@@ -19,6 +19,14 @@ else
     {
       <li>
         @join.Treat.Crub
+        @if (User.Identity.IsAuthenticated)
+        {
+          @using (Html.BeginForm("DeleteTreat", "Flavors"))
+          {
+            @Html.Hidden("joinId", @join.RecipeId)
+            <input class="noButton" type="submit" value="Remove this Treat" />
+          }
+        }
       </li>
     }
   </ul>
@@ -33,7 +41,7 @@ else
   <div class="adminPanel">
     <hr>
     <h5>Admin Options</h5>
-    @* <p>@Html.ActionLink("Add a Treat Option for this Flavor", "AddTreat", new {id = Model.FlavorId})</p> *@
+    <p>@Html.ActionLink("Add a Treat in this Flavor", "AddTreat", new {id = Model.FlavorId})</p>
     <p>@Html.ActionLink("Edit this Flavor", "Edit", new {id = Model.FlavorId})</p>
     <p>@Html.ActionLink("Remove from Menu", "Delete", new {id = Model.FlavorId})</p>
   </div>

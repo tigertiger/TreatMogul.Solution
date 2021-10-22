@@ -85,7 +85,8 @@ namespace TreatMogul.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-
+    
+    [AllowAnonymous]
     public ActionResult Details(int id)
     {
       Treat thisTreat = _db.Treats

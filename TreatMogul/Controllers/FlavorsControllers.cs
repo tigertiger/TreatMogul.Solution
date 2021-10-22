@@ -51,6 +51,42 @@ namespace TreatMogul.Controllers
       return RedirectToAction("Index");
     }
 
+    public ActionResult AddTreat(int id)
+    {
+      var thisFlavor = _db.Flavors
+      .Include(flavor => flavor.JoinEntities)
+      .ThenInclude(join => join.Treat)
+      .FirstOrDefault(flavor => flavor.FlavorId == id);
+      ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "Crub");
+      return View(thisFlavor);
+    }
+
+    [HttpPost]
+    public ActionResult AddTreat(Flavor flavor, int TreatId, Treat treat, int FlavorId, int id)
+    {
+      if (TreatId !=0 && !_db.Recipes.Any(model => model.TreatId == treat.TreatId && model.FlavorId == FlavorId))
+      {
+        _db.Recipes.Add(new Recipe() {TreatId = TreatId, FlavorId = flavor.FlavorId});
+      }
+      _db.SaveChanges();
+      var thisFlavor = _db.Flavors
+      .Include(flavor => flavor.JoinEntities)
+      .ThenInclude(join => join.Treat)
+      .FirstOrDefault(flavor => flavor.FlavorId == id);
+      ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "Crub");
+      return View("Details", thisFlavor);
+    }
+
+    [HttpPost]
+    public ActionResult DeleteTreat(int joinId, int FlavorId)
+    {
+      var joinEntry = _db.Recipes.FirstOrDefault(entry => entry.RecipeId == joinId);
+      _db.Recipes.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    [AllowAnonymous]
     public ActionResult Details(int id)
     {
       Flavor thisFlavor = _db.Flavors
