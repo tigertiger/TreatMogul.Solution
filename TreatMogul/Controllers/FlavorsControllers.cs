@@ -60,5 +60,38 @@ namespace TreatMogul.Controllers
       return View(thisFlavor);
     }
 
+    public ActionResult Edit(int id)
+    {
+      Flavor thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
+      ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "Crub");
+      return View(thisFlavor);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Flavor flavor, int TreatId)
+    {
+      if (TreatId !=0)
+      {
+        _db.Recipes.Add(new Recipe() {TreatId = TreatId, FlavorId = flavor.FlavorId});
+      }
+      _db.Entry(flavor).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Details", new {id = flavor.FlavorId});
+    }
+
+    public ActionResult Delete(int id)
+    {
+      Flavor thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
+      return View(thisFlavor);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult Destroy(int id)
+    {
+      Flavor thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
+      _db.Flavors.Remove(thisFlavor);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }

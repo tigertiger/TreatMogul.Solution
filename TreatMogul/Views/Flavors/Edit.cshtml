@@ -3,3 +3,19 @@
 }
 
 @model TreatMogul.Models.Flavor
+
+<h3>Edit @Model.Taste</h3>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.FlavorId)
+
+  @Html.Label("Flavor")
+  @Html.EditorFor(model => model.Taste, new {@class = "form-control", placeholder="What's it taste like?", required="required"})<br />
+
+  @Html.Label("Add or Update Cautions")<br />
+  @Html.EditorFor(model => model.Cautions)<br/><br />
+
+  <input type="submit" value="Update" />
+
+}

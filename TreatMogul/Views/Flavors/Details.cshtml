@@ -27,3 +27,14 @@ else
 <div class="warningsBlock">
   <p>Warning: @Model.Cautions</p>
 </div>
+
+@if (User.Identity.IsAuthenticated)
+{
+  <div class="adminPanel">
+    <hr>
+    <h5>Admin Options</h5>
+    @* <p>@Html.ActionLink("Add a Treat Option for this Flavor", "AddTreat", new {id = Model.FlavorId})</p> *@
+    <p>@Html.ActionLink("Edit this Flavor", "Edit", new {id = Model.FlavorId})</p>
+    <p>@Html.ActionLink("Remove from Menu", "Delete", new {id = Model.FlavorId})</p>
+  </div>
+}
