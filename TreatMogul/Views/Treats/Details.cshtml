@@ -36,3 +36,9 @@ else
     }
   </ul>
 }
+
+  <div class="adminPanel">
+    <hr>
+    <h5>Admin Options</h5>
+    <p>@Html.ActionLink("Add a Special Flavor for this Treat", "AddFlavor", new {id = Model.TreatId})</p>
+  </div>
