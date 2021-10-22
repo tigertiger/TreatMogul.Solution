@@ -3,3 +3,37 @@
 body {
   font-family: 'Zen Kurenaido', sans-serif;
 }
+
+.container {
+  padding: 3% 0 0 2%;
+}
+
+.noButtonLogOut {
+  background: transparent;
+  border: 0px transparent;
+  font-family: 'Zen Kurenaido', sans-serif;
+  font-weight:100;
+  text-transform: lowercase;
+  letter-spacing:.2rem;
+}
+
+.noButtonLogOut:hover {
+  text-decoration:none;
+}
+
+.column {
+  float:right;
+  width:10%;
+}
+
+div#navBar {
+  position:fixed;
+  left:0px;
+  top:0px;
+  width:100%;
+  padding:8px;
+  font-family:'Zen Kurenaido', sans-serif;
+  font-weight:100;
+  text-transform: lowercase;
+  letter-spacing:.2rem;
+}
