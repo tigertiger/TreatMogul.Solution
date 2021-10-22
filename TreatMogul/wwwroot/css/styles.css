@@ -26,6 +26,21 @@ body {
   width:10%;
 }
 
+.columnF {
+  float:left;
+  width:15%;
+}
+
+.column2 {
+  width:45%;
+  float:left;
+  /* height: 50px; */
+  margin:0 0 0 1%;
+  text-align: center;
+  /* font-size:15pt; */
+  letter-spacing: .3rem;
+}
+
 #navBar {
   position:fixed;
   left:0px;
@@ -51,3 +66,40 @@ body {
 .noButton:hover {
   color:rgb(220, 20, 203);
 }
+
+.bodyBlock {
+  padding: 5% 0 0 0;
+}
+
+.centerBlock {
+  width:70%;
+  height: 600px;
+  margin:10% auto;
+  box-sizing: border-box;
+  padding:2%;
+  text-align: center;
+  letter-spacing: .3rem;
+  }
+
+  .centerBlock h1 {
+    font-size: 60pt;
+  }
+
+  .centerBlock h3 {
+    font-size: 30pt;
+    letter-spacing:2rem;
+    margin-top:-15px;
+    padding-bottom:20px;
+  }
+
+  #footer {
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    padding:8px;
+  }
+
+  #teeny {
+    font-size:8pt;
+  }

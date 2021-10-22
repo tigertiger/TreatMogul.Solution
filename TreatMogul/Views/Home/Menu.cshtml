@@ -6,20 +6,27 @@
 @model dynamic;
 
 <h1>Full Menu</h1>
-@if(@Model.Treat.Count == 0 && @Model.Flavor.Count == 0)
-{
-  <br>
-  <p>We're Closed. Come Back Tomorrow. Or the next day, maybe.</p>
-}
-else
-{
-  @foreach(var treat in Model.Treat)
+<div class="bodyBlock">
+  @if(@Model.Treat.Count == 0 && @Model.Flavor.Count == 0)
   {
-    @Html.ActionLink($"{treat.Crub}", "Details", "Treats", new {id = treat.TreatId})
+    <br>
+    <p>We're Closed. Come Back Tomorrow. Or the next day, maybe.</p>
   }
-
-    @foreach(var flavor in Model.Flavor)
+  else
   {
-    @Html.ActionLink($"{flavor.Taste}", "Details", "Flavors", new {id = flavor.FlavorId})
+    <div class="column2">
+      <h4>Treats & Eats</h4>
+      @foreach(var treat in Model.Treat)
+      {
+        <h5> @Html.ActionLink($"{treat.Crub}", "Details", "Treats", new {id = treat.TreatId}) </h5>
+      }
+    </div>
+    <div class="column2">
+      <h4>Specialty Flavors</h4>
+      @foreach(var flavor in Model.Flavor)
+    {
+      <h5> @Html.ActionLink($"{flavor.Taste}", "Details", "Flavors", new {id = flavor.FlavorId}) </h5>
+    }
+    </div>
   }
-}
+</div>

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>TITLE GOES HERE</title>
+    <title>Fine & Fancy Treats & Eats</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
@@ -14,5 +14,6 @@
     <div class="container">
       @RenderBody()
     </div>
+    @await Html.PartialAsync("_Footer")
   </body>
 </html>

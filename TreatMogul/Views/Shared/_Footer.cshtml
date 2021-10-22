@@ -1,0 +1,18 @@
+<div id="footer">
+  <div class="adminPanel">
+    <hr>
+    @if (User.Identity.IsAuthenticated)
+    {
+    <h5>Admin Panel</h5>
+    <div class="columnF">
+      <p>@Html.ActionLink("add a treat", "Create", "Treats")</p>
+    </div>
+    <div class="columnF">
+      <p>@Html.ActionLink("add a flavor", "Create", "Flavors")</p>
+    </div>
+    }
+    <div class="columnF">
+      <p class="teeny">@Html.ActionLink("log in or register as admin", "Index", "Account")</p>
+    </div>
+  </div>
+</div>
