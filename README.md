@@ -57,6 +57,11 @@ _Detailsssss_
   - Run ```dotnet run``` 
   - If you would like to be able to continue viewing the site while making changes to its content, instead run ```dotnet watch run```
   - Access http://localhost:5000/ in your browser to view & interact with the web app
+  - This app includes authentication via Identity. If you'd like to interact with the website as a logged-in user, click the "log in or register as admin" link in the lower left corner of the screen.
+  - From the Authentication page, choose Register: type in your desired username and password, confirm your password and click Register
+  - Then log in
+  - You will now have the ability to create, edit, and delete treats & flavors, as well as to add flavors to treats & vice versa.
+  - Enjoy.
 
 ## Known Issues
 
