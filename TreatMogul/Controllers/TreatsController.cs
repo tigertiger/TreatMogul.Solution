@@ -13,5 +13,23 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace TreatMogul.Controllers
 {
+  public class TreatsController : Controller
+  {
+    private readonly TreatMogulContext _db;
+    private readonly UserManager<ApplicationUser> _userManager;
 
+    public TreatsController(UserManager<ApplicationUser> userManager, TreatMogulContext db)
+    {
+      _userManager = userManager;
+      _db = db;
+    }
+
+    public ActionResult Index()
+    {
+      List<Treat> sorted = _db.Treats.ToList().OrderBy(treat => treat.Crub).ToList();
+      return View(sorted);
+    }
+
+
+  }
 }

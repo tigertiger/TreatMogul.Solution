@@ -66,7 +66,7 @@ namespace TreatMogul
 
       app.Run(async (context) =>
       {
-        await context.Response.WriteAsync("Check your routes.");
+        await context.Response.WriteAsync("Page not found. Sorry. :[");
       });
     }
   }

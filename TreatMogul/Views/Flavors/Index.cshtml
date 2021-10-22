@@ -2,4 +2,18 @@
   Layout = "_Layout";
 }
 
-@model TreatMogul.Models.Flavor
+@using TreatMogul.Models
+
+<h1>Browse Flavors</h1>
+
+@if (Model.Count == 0)
+{
+  <p>There are no flavors. Check the tongue of the universe. Something is wrong.</p>
+}
+
+<ul>
+@foreach (Flavor flavor in Model)
+{
+  <li>@Html.ActionLink($"{flavor.Taste}", "Details", new {id = flavor.FlavorId})</li>
+}
+</ul>
