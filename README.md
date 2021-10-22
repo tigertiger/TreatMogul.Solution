@@ -1,3 +1,5 @@
+# Hey, Melissa! Don't forget: Describe authenticated/unauthenticated user options!
+
 <p align="left"><img style="float:left; padding:2px;" src="TreatMogul/wwwroot/img/cake.png"></p>  
 
 # Pierre's Sweet & Savory Treats

@@ -2,4 +2,28 @@
   Layout = "_Layout";
 }
 
+@using TreatMogul.Models
 @model TreatMogul.Models.Flavor
+
+<h4>@Model.Taste</h4>
+
+@if (@Model.JoinEntities.Count == 0)
+{
+  <p>There are currently no treats that come in @Model.Taste flavor</p>
+}
+else
+{
+  <p>@Model.Taste Treats</p>
+  <ul>
+    @foreach(var join in Model.JoinEntities)
+    {
+      <li>
+        @join.Treat.Crub
+      </li>
+    }
+  </ul>
+}
+
+<div class="warningsBlock">
+  <p>Warning: @Model.Cautions</p>
+</div>

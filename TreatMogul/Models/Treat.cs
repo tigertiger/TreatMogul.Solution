@@ -14,6 +14,7 @@ namespace TreatMogul.Models
     public string Crub { get; set; }
     public int BatchSize {get; set;}
     public int TreatPrice {get; set;}
+    public bool Yummy {get; set;}
     public virtual ICollection<Recipe> JoinEntities { get;}
 
   }

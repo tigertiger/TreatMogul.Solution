@@ -17,6 +17,10 @@
 
     @Html.Label("How much does a batch cost?")<br />
     @Html.TextBoxFor(model => model.TreatPrice)<br/>
+
+    @Html.Label("Is it yummy?")<br />
+    <span>Yes:</span> @Html.CheckBoxFor(model => model.Yummy)<br/>
+    <span>for no, leave checkbox blank</span><br /><br />
   
     <input type="submit" value="Add to Menu" />
   }
