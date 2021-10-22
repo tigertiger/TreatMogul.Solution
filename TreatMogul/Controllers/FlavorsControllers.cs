@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace TreatMogul.Controllers
 {
+  [Authorize]
   public class FlavorsController : Controller
   {
     private readonly TreatMogulContext _db;
@@ -24,6 +25,7 @@ namespace TreatMogul.Controllers
       _db = db;
     }
 
+    [AllowAnonymous]
     public ActionResult Index()
     {
       List<Flavor> sorted = _db.Flavors.ToList().OrderBy(flavor => flavor.Taste).ToList();

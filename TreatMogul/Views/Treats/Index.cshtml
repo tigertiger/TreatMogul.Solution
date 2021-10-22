@@ -17,3 +17,11 @@
   <li>@Html.ActionLink($"{treat.Crub}", "Details", new {id = treat.TreatId})</li>
 }
 </ul>
+@if (User.Identity.IsAuthenticated)
+{
+  <div class="adminPanel">
+    <hr>
+    <h5>Admin Options</h5>
+    <p>@Html.ActionLink("Add to Menu", "Create")</p>
+  </div>
+}
