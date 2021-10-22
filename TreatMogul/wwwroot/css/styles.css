@@ -41,3 +41,13 @@ body {
 .adminPanel {
   padding:20px 0 0 0;
 }
+
+.noButton {
+  background: transparent;
+  border: 0px transparent;
+  color:#007bff;
+}
+
+.noButton:hover {
+  color:rgb(220, 20, 203);
+}

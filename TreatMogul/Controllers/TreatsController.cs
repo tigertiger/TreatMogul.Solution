@@ -77,6 +77,15 @@ namespace TreatMogul.Controllers
       return View("Details", thisTreat);
     }
 
+    [HttpPost]
+    public ActionResult DeleteFlavor(int joinId, int TreatId)
+    {
+      var joinEntry = _db.Recipes.FirstOrDefault(entry => entry.RecipeId == joinId);
+      _db.Recipes.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
     public ActionResult Details(int id)
     {
       Treat thisTreat = _db.Treats
@@ -85,5 +94,6 @@ namespace TreatMogul.Controllers
       .FirstOrDefault(treat => treat.TreatId == id);
       return View(thisTreat);
     }
+
   }
 }
