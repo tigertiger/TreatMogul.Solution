@@ -1,12 +1,10 @@
-# Hey, Melissa! Don't forget: Describe authenticated/unauthenticated user options!
+<p align="left" style="float:left; padding-right:10px;"><img style="float:left; padding:2px;" src="TreatMogul/wwwroot/img/cake.png"></p>  
 
-<p align="left"><img style="float:left; padding:2px;" src="TreatMogul/wwwroot/img/cake.png"></p>  
+# Pierre's Fine & Fancy Treats & Eats
+#### _by Melissa Schatz-Miller_  
 
-# Pierre's Sweet & Savory Treats
-
-#### Pierre, Pierre, Pierre
-
-#### _by Melissa Schatz-Miller_
+  
+#### Did you know that Pierre hides a diamond ring in one out of every 100 treats he makes? Maybe you should buy as many as you can afford...you might make it all back, and then some!
 
 ## Technologies Used
 
