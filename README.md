@@ -13,9 +13,6 @@
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
 
 ## Technologies Used
 

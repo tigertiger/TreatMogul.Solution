@@ -1,11 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
 
 body {
+  background: url("/../../img/brooke-lark-V4MBq8kue3U-unsplash.jpeg")no-repeat center center fixed rgba(255, 255, 255, 0.73);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-blend-mode:overlay;
+
   font-family: 'Zen Kurenaido', sans-serif;
 }
 
 .container {
   padding: 3% 0 0 2%;
+}
+
+a {
+  color:rgb(131, 75, 1);
+}
+
+a:hover {
+  text-decoration:none;
+  color: rgba(230, 181, 117, 0.849);
 }
 
 .noButtonLogOut {
