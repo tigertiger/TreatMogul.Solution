@@ -1,4 +1,4 @@
-<p align="left" style="float:left; padding-right:10px;"><img style="float:left; padding:2px;" src="TreatMogul/wwwroot/img/cake.png"></p>  
+<img align="left" src="TreatMogul/wwwroot/img/cake.png">  
 
 # Pierre's Fine & Fancy Treats & Eats
 #### _by Melissa Schatz-Miller_  
@@ -14,10 +14,6 @@
 * _Identity_
 * _ASP.NET Core_
 * _Entity Framework Core_
-
-## Description
-
-_Detailsssss_  
 
 ## Instructions
 
